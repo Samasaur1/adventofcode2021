@@ -1,0 +1,1 @@
+export STATE=$(cat file.txt); for run in {1..80}; do export STATE=$(echo $STATE | tr "012345678" "f01234567" | sed 's/f/6,8/g'); done; echo $STATE | tr -d "012345678" | wc -c
